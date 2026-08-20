@@ -37,6 +37,15 @@ dependencies:
   google_fonts: ^8.2.0
   shared_preferences: ^2.5.5
 
+  # Used to receive the device's cumulative step count.
+  pedometer: ^4.2.0
+
+  # Used to request permissions such as Android ACTIVITY_RECOGNITION.
+  permission_handler: ^12.0.3
+
+  # Used to persist step records and query them by date and hour.
+  sqflite: ^2.4.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

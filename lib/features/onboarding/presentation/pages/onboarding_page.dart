@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import '../../../../core/theme/sol_colors.dart';
+import '../../../../main.dart';
 import '../../../../shared/widgets/sol_flower.dart';
 import '../../../../shared/widgets/sol_ios_switch.dart';
 import '../../../../shared/widgets/sol_ui.dart';
@@ -438,7 +439,9 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   void _enterApp() {
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute<void>(builder: (_) => const MainShellPage()),
+      MaterialPageRoute<void>(builder: (_) => MainShellPage(
+        stepCounter: stepCounter,
+      )),
     );
   }
 

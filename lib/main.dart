@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 import 'core/theme/sol_theme.dart';
+import 'core/Utils/StepCounter/step_counter.dart';
+import 'core/Utils/StepCounter/step_repository.dart';
 import 'features/onboarding/presentation/pages/onboarding_page.dart';
 
-void main() {
+final StepRepository stepRepository = StepRepository();
+
+final StepCounter stepCounter = StepCounter(
+  repository: stepRepository,
+);
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
+  await SystemChrome.setEnabledSystemUIMode(
+    SystemUiMode.edgeToEdge,
+  );
+
   runApp(const SolApp());
 }
 
