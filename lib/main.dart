@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'core/theme/sol_theme.dart';
 import 'features/onboarding/presentation/pages/onboarding_page.dart';
 
